@@ -4,6 +4,7 @@
 #include "address_pointers.h"
 #include "arguments.h"
 #include "time_to_mm_dd_yyyy.h"
+#include "heaps_basics.h"
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -14,6 +15,7 @@ void testCountDownThree(void);
 void testGetFloatMemorySize(void);
 void testCartesianToPolar(void);
 void testcurrentTimeToMMDDYYYY(void);
+void testBMICalculator(void);
 
 int main(int argc, const char * argv[]){
     // Test all logic written while learning
@@ -23,6 +25,7 @@ int main(int argc, const char * argv[]){
     testGetFloatMemorySize();
     testCartesianToPolar();
     testcurrentTimeToMMDDYYYY();
+    testBMICalculator();
     return 0;
 }
 
@@ -68,4 +71,8 @@ void testcurrentTimeToMMDDYYYY(void){
     currentTimeToMMDDYYYY(&mmDDYYYY);
     // Print the current month, date and year.
     printf("MM:DD:YYYY = %d:%d:%d\n\n", mmDDYYYY.date, mmDDYYYY.month, mmDDYYYY.year);
+}
+
+void testBMICalculator(void) {
+    calculateBMIExample();
 }
