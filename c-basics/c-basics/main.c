@@ -2,6 +2,8 @@
 #include "find_sine.h"
 #include "count_down_three.h"
 #include "address_pointers.h"
+#include "arguments.h"
+#include "time_to_mm_dd_yyyy.h"
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -10,6 +12,8 @@ void testFindThirdAngle(void);
 void testFindSine(void);
 void testCountDownThree(void);
 void testGetFloatMemorySize(void);
+void testCartesianToPolar(void);
+void testcurrentTimeToMMDDYYYY(void);
 
 int main(int argc, const char * argv[]){
     // Test all logic written while learning
@@ -17,6 +21,8 @@ int main(int argc, const char * argv[]){
     testFindSine();
     testCountDownThree();
     testGetFloatMemorySize();
+    testCartesianToPolar();
+    testcurrentTimeToMMDDYYYY();
     return 0;
 }
 
@@ -40,4 +46,26 @@ void testCountDownThree(void){
 
 void testGetFloatMemorySize(void){
     printf("The size of float data in memory is %d bytes.\n", getFloatMemorySize());
+}
+
+void testCartesianToPolar(void){
+    // The sample cartesian coordinates
+    float x = 3.0;
+    float y = 4.0;
+    // The sample polar coordinates
+    double radius;
+    double theta;
+    // Call the cartesian to polar with pointers
+    cartesianToPolar(x, y, &theta, &radius);
+    // Print the values
+    printf("Cartesian coordinates: x = %f, y = %f\n", x, y);
+    printf("Polar coordinates: theta = %f, radius = %f\n", theta, radius);
+    printf("Theta converted to degrees = %f\n\n", radiansToDegrees(theta));
+}
+
+void testcurrentTimeToMMDDYYYY(void){
+    DateFormat mmDDYYYY;
+    currentTimeToMMDDYYYY(&mmDDYYYY);
+    // Print the current month, date and year.
+    printf("MM:DD:YYYY = %d:%d:%d\n\n", mmDDYYYY.date, mmDDYYYY.month, mmDDYYYY.year);
 }
