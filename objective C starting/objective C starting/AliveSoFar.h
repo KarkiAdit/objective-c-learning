@@ -3,8 +3,6 @@
 #ifndef AliveSoFar_h
 #define AliveSoFar_h
 
-@class AliveSoFar; // Class definition
-
 #import <Foundation/Foundation.h>
 
 typedef struct {

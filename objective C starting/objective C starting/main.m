@@ -1,13 +1,24 @@
 #import "AliveSoFar.h"
+#import "IsDayLightSavingsUsed.h"
+#import "PrintComputerName.h"
+#import "ArrayBasics.h"
+#import "ProcessPeopleNames.h"
 #import <Foundation/Foundation.h>
 
 // All test functions
 void testAliveSoFar(void);
+void testIsDaylightSavingsUsed(void);
+void testProcessNames(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // Run all test logic
         testAliveSoFar();
+        testIsDaylightSavingsUsed();
+        printComputerName();
+        nsArrayBasics();
+        nsMutableArrayBasics();
+        testProcessNames();
     }
     return 0;
 }
@@ -27,3 +38,13 @@ void testAliveSoFar(void) {
     NSLog(@"You have been alive for %f seconds.", aliveTime);
 };
 
+void testIsDaylightSavingsUsed(void) {
+    NSLog(@"Day light savings is %s used.", (isDayLightSavingsUsed() ? "": "not"));
+}
+
+void testProcessNames(void){
+    NSMutableArray *processedNames = processNames();
+    for (NSString *name in processedNames){
+        NSLog(@"%@", name);
+    }
+}

@@ -22,9 +22,22 @@
 		BA8544E32D7A413D0037EC50 /* objective C starting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "objective C starting"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		BA8544FF2D7D19870037EC50 /* Exceptions for "objective C starting" folder in "Copy Files" phase from "objective C starting" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = BA8544E12D7A413D0037EC50 /* CopyFiles */;
+			membershipExceptions = (
+				main.m,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BA8544E52D7A413D0037EC50 /* objective C starting */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BA8544FF2D7D19870037EC50 /* Exceptions for "objective C starting" folder in "Copy Files" phase from "objective C starting" target */,
+			);
 			path = "objective C starting";
 			sourceTree = "<group>";
 		};
@@ -67,6 +80,7 @@
 				BA8544DF2D7A413D0037EC50 /* Sources */,
 				BA8544E02D7A413D0037EC50 /* Frameworks */,
 				BA8544E12D7A413D0037EC50 /* CopyFiles */,
+				BA8545062D7D1D3B0037EC50 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -114,6 +128,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA8545062D7D1D3B0037EC50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA8544DF2D7A413D0037EC50 /* Sources */ = {
