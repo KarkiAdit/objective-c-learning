@@ -35,7 +35,7 @@ NSMutableArray *listAllNames(void){
         if (error) {
             NSLog(@"Error reading file: %@", error.localizedDescription);
             // In case of error, store some random names
-            names = [@[@"Sonia", @"zoe", @"soNia", @"zlatan", @"ronaldo", @"messi", @"ZOE"] mutableCopy
+            names = [@[@"Sonia", @"zoe", @"soNia", @"zlatan", @"ronaldo", @"Messi", @"messi", @"ZOE", @"zOE", @"Zlatan", @"Ronaldo"] mutableCopy
             ];
         } else {
             // Store individual names from file based on newline
@@ -58,9 +58,10 @@ NSMutableArray* processNames(void) {
         int idx = 0;
         NSUInteger size = [names count];
         while (idx < size - 1) {
-            NSString *name_at_idx = names[idx];
             NSUInteger curr_next = idx + 1;
             while (curr_next < size){
+                // Find the fixed element at idx position
+                NSString *name_at_idx = names[idx];
                 // Check if current element matches the element at fixed index
                 NSString *curr = names[curr_next];
                 NSComparisonResult compResult = [name_at_idx caseInsensitiveCompare:curr];
@@ -77,10 +78,11 @@ NSMutableArray* processNames(void) {
                     temp = names[idx];
                     names[idx] = names[curr_next];
                     names[curr_next] = temp;
+                    curr_next++;
                 } else {
                     NSLog(@"%@ comes before %@.", name_at_idx, curr);
+                    curr_next++;
                 }
-                curr_next++;
             }
             idx++;
         }
