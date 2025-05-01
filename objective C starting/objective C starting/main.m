@@ -9,6 +9,10 @@
 void testAliveSoFar(void);
 void testIsDaylightSavingsUsed(void);
 void testProcessNames(void);
+void testStaticNSMutableArray(void);
+
+// Helper functions
+NSArray* getStaticNSMutableArray(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -19,6 +23,7 @@ int main(int argc, const char * argv[]) {
         nsArrayBasics();
         nsMutableArrayBasics();
         testProcessNames();
+        testStaticNSMutableArray();
     }
     return 0;
 }
@@ -47,4 +52,22 @@ void testProcessNames(void){
     for (NSString *name in processedNames){
         NSLog(@"%@", name);
     }
+}
+
+void testStaticNSMutableArray(void) {
+    NSArray *oddsPtr = getStaticNSMutableArray();
+    NSLog(@"Print the non-mutable array here. Now it can't be changed. %@", oddsPtr);
+}
+
+NSArray* getStaticNSMutableArray(void){
+    static NSMutableArray *odds = nil;
+    if (!odds) {
+        odds = [[NSMutableArray alloc] init];
+        int i = 1;
+        while ([odds count] < 30){
+            [odds addObject: [NSNumber numberWithInt:i]];
+            i += 2;
+        }
+    }
+    return odds;
 }

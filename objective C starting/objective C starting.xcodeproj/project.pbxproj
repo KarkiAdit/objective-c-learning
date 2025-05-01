@@ -22,9 +22,22 @@
 		BA8544E32D7A413D0037EC50 /* objective C starting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "objective C starting"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BA2D3F4E2DC2BCF80049AC20 /* Exceptions for "objective C starting" folder in "objective C starting" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				argumentPassing.m,
+			);
+			target = BA8544E22D7A413D0037EC50 /* objective C starting */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 		BA8544FF2D7D19870037EC50 /* Exceptions for "objective C starting" folder in "Copy Files" phase from "objective C starting" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				main.m = (CodeSignOnCopy, );
+			};
 			buildPhase = BA8544E12D7A413D0037EC50 /* CopyFiles */;
 			membershipExceptions = (
 				main.m,
@@ -36,6 +49,7 @@
 		BA8544E52D7A413D0037EC50 /* objective C starting */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				BA2D3F4E2DC2BCF80049AC20 /* Exceptions for "objective C starting" folder in "objective C starting" target */,
 				BA8544FF2D7D19870037EC50 /* Exceptions for "objective C starting" folder in "Copy Files" phase from "objective C starting" target */,
 			);
 			path = "objective C starting";
