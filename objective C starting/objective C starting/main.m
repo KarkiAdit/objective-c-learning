@@ -10,6 +10,7 @@ void testAliveSoFar(void);
 void testIsDaylightSavingsUsed(void);
 void testProcessNames(void);
 void testStaticNSMutableArray(void);
+void testSomeConstantsIdeas(void);
 
 // Helper functions
 NSArray* getStaticNSMutableArray(void);
@@ -24,6 +25,7 @@ int main(int argc, const char * argv[]) {
         nsMutableArrayBasics();
         testProcessNames();
         testStaticNSMutableArray();
+        testSomeConstantsIdeas();
     }
     return 0;
 }
@@ -70,4 +72,13 @@ NSArray* getStaticNSMutableArray(void){
         }
     }
     return odds;
+}
+
+void testSomeConstantsIdeas(void) {
+    NSLog(@"\u03c0 is %f", M_PI); // Comes from include and import of Foundation header file.
+    NSLog(@"%d is larger", MAX(10, 12)); // Come from defined macro of Foundation header file.
+    
+    NSLocale *here = [NSLocale currentLocale];
+    NSString *currency = [here objectForKey: NSLocaleCurrencyCode]; // NSLocaleCurrencyCode is declared as constant somewhere in header.
+    NSLog(@"Money is %@", currency);
 }
